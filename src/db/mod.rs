@@ -9,7 +9,7 @@ pub const MIGRATIONS: EmbeddedMigrations = embed_migrations!();
 pub fn establish_connection() -> PgConnection {
     dotenv().ok();
 
-    let database_url = env::var("postgres://postgres:Horade123@host:5432/postgres")
+    let database_url = env::var("")
         .expect("DATABASE_URL must be set");
     PgConnection::establish(&database_url)
         .expect(&format!("Error connecting to {}", database_url))
